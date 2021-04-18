@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Les Conditions2 en JS</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+/** La condition if **/
+       var heure = 15;
+
+       if (heure <= 18 == true){ /* On demande au js de comparer 15 à 15 puis de renvoyer la valeur true ou false */
+       	  alert("Bonjour"); /* Si la valeur renvoie bien à true (vérifiée) alors on exécute le code, ici alert("Bonjour") */
+       }
+/* Si on avait remplacé la valeur true par false le code n'aurait pas été exécuté = rien d'affiché */
+/* De même si on avait changé la valeur 15 par 21 js aurait renvoyé à false = rien d'affiché */
+
+ var heure = 21;
+
+       if (heure <= 18 == false){ /* On demande au js de comparer 15 à 15 puis de renvoyer la valeur true ou false */
+       	  alert("Bonsoir"); /* Si la valeur renvoie bien à false (vérifiée) alors on exécute le code, ici alert("Bonsoir") */
+       }
+/* Au final, le js compare true et false, si true = true --> code exécuté (et inversement) si true != false --> pas exécuté */
+
+
+/** La condition else **/
+ 
+ var heure = 21;
+
+
+       if (heure <= 18 == true){   /* On demande au js de comparer 15 à 15 puis de renvoyer la valeur true ou false */
+       	  alert("Bonjour");   /* Si la valeur renvoie bien à true (vérifiée) alors on exécute le code, ici alert("Bonjour") */
+       }
+       else{    /* Jamais de test effectué en else puisque qu'il prend en compte tous les autres cas */
+       	alert("Bonsoir")   /* Si false, on affiche Bonsoir */
+       }
+
+/** La condition if/else if/else **/
+     
+  var heure = 9; /* Ici la valeur est < 12 donc le navigateur affichera Il est midi */
+
+      if (typeof(heure) == "number" == true) {
+       if (heure < 12 == true){  /* Ce n'est pas utile d'écrire == true ou == false */
+       	  alert("C'est le matin");
+       }
+       else if (heure == 12 == true){
+       	  alert("Il est midi");
+       }
+       else if (heure <= 18 == true){
+       	  alert("C'est l'après-midi");
+       }
+       else{
+       	  alert("C'est le soir");
+       }
+      }
+       else{
+       	 alert("Mauvais type de valeur"); /* Si on rentre une valeur string dans var heure alors affiche Mauvais type de valeur */
+       }
+
+
+
+	</script>
+
+</body>
+</html>

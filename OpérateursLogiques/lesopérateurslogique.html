@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Les Opérateurs Logiques</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<script>
+/* L'opérateur && */
+
+		  var heure = 9; /* Selon ma valeur ici, la page n'indiquera pas la même alerte évidemment */
+
+		if (heure >= 0 && heure < 12){ /* && = ET vérifie les 2 conditions heure >= 0 et heure < 12 */
+			alert("C'est le matin");
+		}
+		  else if (heure === 12){ /* === : égalité stricte, vérifie le type et la valeur */
+			alert("Il est midi");
+		}
+		  else if (heure > 12 && heure <= 24){
+			alert("C'est l'après midi ou le soir");
+		}
+		  else {
+			alert("La valeur entrée ne semble pas valide");
+		}
+
+/* L'opérateur || */
+
+		var heure = 26;
+
+		if (heure < 0 || heure > 24){ /* || = OU donc vérifie l'une ou l'autre des conditions */
+			alert("L'heure ne semble pas valide")
+		}
+		else {
+			alert("L'heure semble valide")
+		}
+
+/* L'opérateur ! */
+
+        var heure = 18;
+
+        if (!heure <= 16){  /* Ici on nie la condition de départ avec ! qui est un opérateur contraire */
+        	alert("Il est plus de 16h"); /* JS renverra alors à true au ieu de renvoyer à false */
+        }
+        else {
+        	alert("Il est moins de 16h");
+        }
+	</script>
+
+</body>
+</html>

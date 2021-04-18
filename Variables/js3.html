@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Les Types de valeurs des variables</title>
+</head>
+<body>
+	<h1>Les Types de Valeurs JS</h1>
+	<meta charset="utf-8" />
+	<script>
+/* Type de valeurs Number */
+		var x = 25; /* si var x = "25" elle stockera le chaine de caractère 2 et 5 et pas le nombre 25 */
+		var y = -15; /* Cela influencera le code par la suite */
+		var z = 3.20;
+
+		var x = "quatre"; /* x stock la chaîne de caractères quatre et plus le nombre 25 */
+
+/* Type de valeurs string ou chaîne de caractères */
+        var prenom = "Billy";
+        var nom = 'TheKid';
+        var sexe = `non binaire`; /* !! utiliser "" pour indiquer type de valeur string */
+
+        var dpt = "Je vis dans le \"59\""; /* Intégrer un nombre à une valeur string */
+        var dpt2 = 'Je vis dans le"59"';
+
+/* Les booléens ou true/false permettent de vérifier des conditions */
+        var online = true;
+        var disconected = false; /* On n'utilise ni "" ni '' */
+                                 /* Si "" ou '' la variables stockera la chaine de caractère et plus le booléen */
+
+        var n = null; /* La valeur de la variable est inconnue */
+        var u = undefined; /* La valeur n'est pas définie */
+        var nn = NaN; /* "NotaNumber" = la valeur n'est pas un nombre */
+
+        alert("Variable x : " + typeof(x) +
+        	  "\nVariable y : " + typeof(y) + /* "\n" sert au retour à la ligne dans l'affichage */
+        	  "\nVariable online : " + typeof(online) + /* "+" sert à mettre bout à bout des chaines de caractères = concaténation */
+        	  "\nVariable n : " + typeof(n) +
+        	  "\nVariable u : " + typeof(u) +
+        	  "\nVariable nn : " + typeof(nn));
+/* AFFICHAGE : Variable x : string, etc. Attention, certains résultats peuvent être contestables : Variable nn : number */
+	</script> 
+
+</body>
+</html>

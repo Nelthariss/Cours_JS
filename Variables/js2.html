@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Les variables</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<h1>Déclarer des variables en JS</h1>
+
+	<script>
+		var x = 25; /* Ces deux var sont différentes !! */
+		var X = 100;
+
+		x = x + 5; /* D'abord on stock 25 dans la variable x puis on la modifie en lui disant de stocker */
+		           /* la valeur précdente de x + 5 donc elle stock désormais 30 */
+		           /* Le = est un opérateur d'AFFECTION et PAS d'égalité */
+
+/* Pour déclarer plusieurs variables d'un coup : */
+        var prenom = "Billy", nom = "TheKid", departement = 59; /* On utilise des "," et pas des ";" sauf à la fin déclaration */
+
+/* Il est toujours préférable qd déclaration var de lui affecter valeur nulle "var ville = ''"; */
+/* plutôt que de la déclarer comme ça : var ville; */
+        var ville = "";
+        ville = "Tataouine sur Tamer";
+
+        var homme = true /* Ceci est un booléen = valeur true ou false */
+	</script>
+
+</body>
+</html>

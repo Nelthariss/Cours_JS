@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Créer des objets en JS</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		var obj_string = new String("Je suis un objet");
+		var obj_cree = new Object();
+
+		obj_cree.prenom = "Billy"; /* avec le . on donne la propriété à la valeur créée puis avec le = on y stock la valeur */
+		obj_cree.nom = "TheKid";
+		obj_cree.age = 22;
+
+		alert("Prénom : " + obj_cree.prenom + 
+			  "\nNom : " + obj_cree.nom + 
+			  "\nAge : " + obj_cree.age);
+
+/** Créer un objet littéral **/
+
+         var bob  = {
+         	prenom: "Bob",
+         	nom: "Lennon",
+         	age: 25,
+
+         	id: function(){
+         		return this.prenom + ' ' + this.nom; /* this représente l'objet (comme si on le pointait du doigt) */
+         	}
+         };
+
+         alert(bob.id());
+
+/** Constructeur **/
+
+        function Identite(c, t, m){ /* C'est le constructeur */
+        	this.couleur = c; 
+        	this.taille = t;
+        	this.matiere = m;
+        }
+
+        var  crayon = new Identite("Rouge", 20,"Bois"); /* Ces valeurs sont stockées dans c, t et m */
+        var stylo = new Identite("Noir", 18, "Plastique");
+
+        alert("Couleur du crayon : " + crayon.couleur +
+        	  "\nTaille du crayon : " + crayon.taille +
+        	  "\nMatière du crayon : " + crayon.matiere +
+        	  "\nCouleur du stylo : " + stylo.couleur +
+        	  "\nTaille du stylo : " + stylo.taille +
+        	  "\nMatière du stylo : " + stylo.matiere);
+
+/** Comparaison du comportement des valeurs primitives et des objets **/ 
+
+        var x = 10;
+        var y = x; /* On stock x dans la variable y donc 10 */
+        y += 10; /* L'ajout de 10 ne modifie pas la valeur de départ de x, elle contiendra toujours 10 */
+
+       alert("Valeur de x : " + x +
+	         "\nValeur de y : " + y);
+
+
+        function Identite(c, t, m){ 
+        	this.couleur = c; 
+        	this.taille = t;
+        	this.matiere = m;
+        }
+
+        var  crayon = new Identite("Rouge", 20,"Bois");
+        var stylo = crayon; /* stylo est juste une autre référence mais qui pointe vers le même objet */
+
+        stylo.taille = 33; /* Par conséquent, la modification s'applique aussi à la valeur taille de crayon qui contient aussi 33 désormais */
+
+        alert("Taille du crayon : " + crayon.taille +
+        	  "\nTaille du stylo : " + stylo.taille);
+
+/** A RETENIR : on appelle les objets par des références et non des valeurs contrairement aux valeurs primitives **/
+
+	</script>
+
+</body>
+</html>

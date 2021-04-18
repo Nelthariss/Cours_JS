@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Introduction aux objets en JS</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		var primitive = "Je suis une valeur primitive";
+
+		var billy = { /* Cette variable stock un objet */
+			prenom : "Billy", /* Ce sont des propriétés */
+			nom : "TheKid",
+			age : 22,
+
+			identite : function(){ /* identite = une propriété de la variable billy qui devient une méthode en stockant une fonction */
+				return "Prénom : " + this.prenom + /* Propriétés de la fonction anonyme function() */
+				       "\nNom : " + this.nom +
+				       "\nAge : " + this.age;
+			}
+		}
+
+		alert(billy.identite()); /* Exécutera le retour à function() et donc les propriétés de function() 
+		                            identite est avant tout une propriété de l'objet billy 
+		                            alert() permet de renvoyer le résultat dans une boîte de dialogue */
+
+/* Les propriétés de billy sont récupérées grâce à this.nompropriété */
+
+	</script>
+
+</body>
+</html>

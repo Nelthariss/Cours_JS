@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Les Fonctions en JS</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		
+/* Soit on renvoie directement le résultat de la fonction avec un alert */
+
+		function multiplication(x,y){
+           alert(x*y); /* Ici le résultat va s'afficher directement dans une boîte de dialogue */
+		}
+
+	    multiplication(4,7);
+	    multiplication(-2,10);
+
+/* Soit on stock le résultat de la fonction dans une vaiable pour le renvoyer plus tard ou le modifier */ 
+
+	    function multiplication(x,y){
+           return x*y; /* Le résultat est simplement retourné et ne s'affichera donc pas */ 
+		}              /* L'instruction return met fin à l'exécution d'une fonction, il est inutile d'écrire d'autres opérations/actions
+		                  après return, il faut donc les écrire AVANT */
+		               
+
+		var resultat1 = multiplication(4,7); /* Cette technique permet de stocker le résultat retourné dans une variable */
+	    var resultat2 = multiplication(-2,10); /* Le résultat pourra donc être modifié comme suit */
+
+	    resultat1 += 2; /* On ajoute 2 au résultat de 4 * 7, ce qui donne 30 */
+	    alert(resultat1) /* La boîte affiche 30 */
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Le Switch en JS</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		var heure = 10;
+
+		switch(heure){ /* switch permet d'appliquer des conditions à des cas particuliers */
+			case 8 :  /* case donne les différents cas à prendre en compte dans le switch */
+			  alert("Il est 8h");
+			  break; /* Permet de ne pas prendre en compte les cas suivant si celui-ci == true, permet de sortir du switch */
+			case 9 :
+			  alert("Il est 9h");
+			  break;
+			case 10 :
+			   alert("IL EST 10H ZARMA");
+			   break;
+			case 11 :
+			   alert("Il est 11h");
+			   break;
+			case 12 :
+			   alert("Ilest l'heure du kebab");
+			   break;
+			default :
+			   alert("Rien à afficher pour cette valeur"); /* Prends tous les cas autres que cités dans le switch */
+		}
+	</script>
+
+</body>
+</html>

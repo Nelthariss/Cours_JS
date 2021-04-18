@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Les Boucles en JS</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+
+/** La boucle while **/
+
+		var x = 0;
+
+		while(x < 10){ /* while = tant que (la condition est vrai) */
+			  alert("x contient la valeur : " + x);
+			  x ++; /* On acrémente la valeur, on en ajoute une à chaque fois, on peut aussi décrémenter avec -- */
+		}
+
+/** L'acrémentation et la décrémentation **/
+
+	    var x1 = 0, x2 = 0, a1 = 10, a2 = 10;
+
+	    var y = x1++; /* Mettre ++ ou -- après le nom de la variable permet de donner la priorité à l'assignation */
+	    var beta = a1--; /* La valeur stockée est donc la valeur de départ de x1 et a1 soit 0 et 10 dans beta */
+	    /* Ensuite pourra se faire acrémentation ou décrémentation */
+	    /* x1 stock donc la valeur 1 et a1 la valeur 9 */
+
+	    var yprim = ++x2; /* Ici on donne la priorité à l'accrémentation ou décrémentation */
+	    var betaprim = --a2; /* La valeur stockée sera donc 1 ou 9 */
+
+	    alert("y : " + y +
+	    	  "\nx1 : " + x1 +
+	    	  "\nbeta : " + beta +
+	    	  "\na1 : " + a1 +
+	    	  "\nyprim : " + yprim +
+	    	  "\nx2 : " + x2 +
+	    	  "\nbetaprim : " + betaprim +
+	    	  "\na2 : " + a2);
+
+/** La boucle do...while **/
+
+        var x = 0; /* Si on change la valeur par 20 admettons, x décrémentera jusque 11 puis la boucle recommencera */
+
+        do{ /* do permet que le test de la condition soit réalisé à la fin de celle-ci */
+        	alert("x vaut : " + x); /* Un tour de boucle sera donc toujours réalisé même si la condition de départ est fausse */
+        	x--;
+        }
+        while(x > 10)
+
+/* La différence entre while et do...while est le fait que dans while si la condition est fausse dès le départ aucune boucle ne sera réalisée puisque le test s'effectue au début de la boucle, si on avait écrit : while(x > 10){alert("x vaut " + x); x--;}, il ne se serait rien passé */
+
+/** La boucle for **/
+
+        var i = "";
+
+        for(i = 0; i < 10; i++){
+         	alert("i contient la valeur : " + i);
+        }
+
+/* Ici le test se réalise progressivement : dans la première boucle on test i = 0 == true, ensuite i est acrémenté et vaut donc 1, le test
+i < 10 peut donc s'effectuer == true donc i est acrémenté et vaut maintenant 2, ainsi de suite jusqu'à ce que le test i < 10 == false */
+
+	</script>
+
+
+</body>
+</html>

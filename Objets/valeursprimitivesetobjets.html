@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valeurs primitives et objets</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		var primitive = "Je suis une valeur primitive"; /* Valeur primitive = chaine de caractères, nombres, booléens (true/false) */
+		var type_prim = typeof(primitive);
+
+		var chaine = new String("Je suis un objet"); /* La variable de type chane va stocker l'objet String qui correspond à "Je suis un
+		                                                objet" */
+        var type_chai = typeof(chaine);
+
+        alert("Type de primitive : " + type_prim + /* Affichera string */
+        	  "\nType de chaine : " + type_chai); /* Affichera object */
+
+/* Une valeur primitive est une simplification d'un objet, il est toujours plus simple et recommandé de le utiliser dès que possible car 
+   beaucoup plus maléables */
+
+        var longueur_prim = primitive.length; /* Permet d'accéder à la longueur de la chaine de caractères */
+        var maj_prim = primitive.toUpperCase(); /* Permet d'afficher la chaine en majuscules */
+
+        var maj_chai = chaine.toUpperCase();
+
+        alert("Longueur de prim : " + longueur_prim +
+        	  "\nMajuscule de prim : " + maj_prim +
+        	  "\nMajuscule de chaine : " + maj_chai);
+
+/** AFFICHAGE : Longueur de prim : 28, Majuscule de prim : JE SUIS UNE VALEUR PRIMITIVE, Majuscule de chaine : JE SUIS UN OBJET 
+    Donc .length et .toUppercase sont bien appliqué à la valeur primitive et à l'objet **/
+
+/* Ce qu'il faut retenir : on peut très bien comparer des valeurs primitives entre elles mais pas des objets, c'est pour ça
+   qu'il est préférable d'utiliser les valeurs primitives pkutôt que les objets */
+   
+	</script>
+
+</body>
+</html>

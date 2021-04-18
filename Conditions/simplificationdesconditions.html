@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simplification des conditions en JS</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+/* Il est inutile dans ses conditions de préciser == true */
+
+       var heure = 18;
+
+       if(heure < 12 == false){
+       	 alert("Il est midi passé");
+       }
+
+       if(!heure < 12){ /* L'opérateur ! est l'équivalent d'un renvoie direct à false, inversement de la condition */
+       	 alert("Il est midi passé"); /* Donc pas besoin d'écrire == false */
+       }
+
+       var x = 6, y = "";
+
+       if(x){
+       	alert("JS considère x == true par défaut"); /* x considéré comme true car sa valeur est définie */
+       }
+
+       if(y){
+       	alert("Js considère y == true par défaut"); /* En réalité y sera considéré comme false par défaut car pas de valeur définie */
+       }
+       else {
+        alert("y == false");
+       }
+	</script>
+
+</body>
+</html>

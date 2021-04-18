@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>La Concaténation</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+/* Plusieurs façons de procéder à la concaténation de strings */
+		var prenom = "Billy", espace = ' ', nom = "TheKid";
+		var billy = prenom + espace + nom;
+		var bob = "Bob" + ' ' + "Lennon"; /* C'est quand mê plus simple d'écrire : var bob = "Bob Lennon" */
+
+		var musique = "Hendrix";
+		var hobbie = "J'aime écouter " + musique; /* On met un espace après écouter pour que ça ne soit pas tout attacher */
+
+		alert("Contenu de la variable hobbie : " + hobbie +
+			  "\nContenu de la variable bob : " + bob +
+			  "\nContenu de la variable billy : " + billy);
+
+/* Concaténer number et string */
+        var x = 2 + 4 + "1";  /* Il faut bien différencier le + qui additionne des chiffres et celui qui concatène des strings */
+        var y = "1" + 2 + 4;  /* Tous les chiffres suivant string "1" = considérés comme string */
+        var z = 2 + "un" + 4; /* Les strings et number ne s'additioneront pas (normal mdr) */
+
+        alert("Variable x : " + x + typeof(x) +
+        	  "\nVariable y : " + y + typeof(y) +
+        	  "\nVariable z : " + z + typeof(z));
+	</script>
+
+</body>
+</html>
